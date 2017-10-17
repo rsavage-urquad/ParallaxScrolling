@@ -9,5 +9,5 @@ excellent tutorials from the from the following URL's
 I created a JavaScript object to make it programmable.  I also added a parameter entry section to allow users to
 play with various values.  Finally, this uses JQuery (loaded from MaxCDN).
 
-** Note ** - Liberties and shortcuts were taken (read the Tutorials for a better understanding).
+**Note** - Liberties and shortcuts were taken (read the Tutorials for a better understanding).
 

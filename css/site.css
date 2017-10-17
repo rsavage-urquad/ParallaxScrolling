@@ -1,0 +1,50 @@
+body {
+    background-color: #ffffff;
+    color: #505050;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.container {
+    margin: 0 80px;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+section.module.content {
+    padding: 40px 0;
+}
+
+section.module.parallax h1 {
+    color: rgba(255, 255, 0, 0.6);
+    font-size: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Table */
+
+th {
+    background-color: midnightblue;
+    color: white;
+}
+
+.label {
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    text-align: right;
+    padding-right: 3px;
+    color: black;
+}

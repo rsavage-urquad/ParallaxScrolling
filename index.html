@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parallex Scrooling Demo</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="javascript/ParallaxScroll.js"></script>
+</head>
+<body>
+
+<section class="module parallax" id="parallaxArea">
+    <div class="container">
+        <h1>Parallax Scroll</h1>
+    </div>
+</section>
+
+<section class="module content">
+    <div class="container">
+        <h2>Parallax Scrolling Parameters</h2>
+
+        <table width="50%">
+            <thead>
+                <tr>
+                    <th width="25%">Parameter</th>
+                    <th width="75%">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label">Image:</td>
+                    <td>
+                        <select name="backgroundImage" id="backgroundImage">
+                            <option value="Moon Rise" selected>Moon Rise</option>
+                            <option value="Mountain Lake">Mountain Lake</option>
+                            <option value="Multiple Planets">Multiple Planets</option>
+                            <option value="Purple Lightning">Purple Lightning</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Background Height:</td>
+                    <td>
+                        <input type="text" name="backgroundHeight" id="backgroundHeight" value="600">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Background Ratio Speed:</td>
+                    <td>
+                        <input type="text" name="speed" id="speed" value="0.25">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Background "X" Position:</td>
+                    <td>
+                        <input type="text" name="xVal" id="xVal" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Background "Y" Position:</td>
+                    <td>
+                        <input type="text" name="yVal" id="yVal" value="-150">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Cover:</td>
+                    <td>
+                        <select name="cover" id="cover">
+                            <option value="False" selected>False</option>
+                            <option value="True">True</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Select" onclick="index.selectClicked();return false;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris molestie nulla et lorem fermentum, a tincidunt sem vestibulum. Mauris condimentum, lectus vitae sollicitudin ultricies, nibh ex hendrerit ipsum, eu vulputate odio sapien nec tellus. Sed placerat nibh nec tincidunt pellentesque. Vestibulum accumsan arcu quam, vel mollis nulla interdum sed. Suspendisse aliquet ligula vitae sapien dignissim, vitae aliquet enim finibus. Vestibulum nec accumsan est, ut ullamcorper massa. Nunc vitae vulputate libero.
+            <br/>&nbsp;<br/>
+            Nullam vulputate, turpis id posuere faucibus, elit nulla porta dui, sit amet cursus velit felis ut ante. Vivamus at pellentesque augue. Nam sollicitudin interdum massa ac sollicitudin. Sed imperdiet erat sed euismod laoreet. Proin ornare imperdiet dui nec varius. Aliquam malesuada mauris ex, at aliquam sapien rutrum in. Sed rhoncus tincidunt justo a elementum.
+            <br/>&nbsp;<br/>
+            In ex magna, luctus quis pharetra eget, ultricies ac nibh. Integer id dignissim nibh, eu molestie nisl. Ut sit amet metus enim. Etiam ut ante ornare tortor lacinia facilisis id vel leo. Integer tellus lectus, dapibus eget ultricies vel, gravida a nisi. Maecenas massa est, dictum a scelerisque ut, commodo eu lectus. Donec purus erat, vulputate euismod metus mattis, egestas egestas felis.
+            <br/>&nbsp;<br/>
+            Praesent laoreet rutrum magna, ut sagittis magna sagittis sit amet. Duis ac erat eu orci porttitor varius. Donec sit amet nibh nec felis rutrum tristique et sed orci. Curabitur eleifend, mauris vel malesuada maximus, lectus ex sagittis ex, id porttitor nulla diam a sem. Nulla diam justo, imperdiet et nisi ac, viverra placerat urna. Praesent mattis consequat ligula sodales pulvinar. Ut nec turpis leo. Vestibulum nec ligula sed tortor iaculis scelerisque id sit amet libero. Phasellus porttitor leo a egestas pretium. Morbi dapibus, mi vel accumsan interdum, metus est varius diam, egestas congue sem arcu placerat ante. Ut in lacinia tellus. Ut lacinia sagittis felis a porttitor. Donec dictum auctor faucibus. Quisque dignissim ut sapien vel molestie. Mauris tempor, leo ut cursus auctor, quam ex mattis massa, sit amet tempor nisi odio volutpat est. Phasellus gravida vulputate dolor id ultricies.
+            <br/>&nbsp;<br/>
+            Etiam malesuada commodo lectus, ac pharetra urna placerat non. Nullam eget sagittis nunc. Vestibulum eget lacus vel lectus cursus vulputate. Sed malesuada suscipit urna sed laoreet. Mauris lobortis nec augue eu aliquam. Curabitur augue sem, dignissim a odio vitae, interdum consectetur nisl. In vitae dapibus risus, eu posuere tellus. Maecenas ut sagittis massa. Cras in nisl nunc. Sed rhoncus accumsan arcu, ac suscipit est finibus in. Integer in diam scelerisque, dapibus est id, porttitor diam. Phasellus euismod nisl sit amet justo condimentum finibus. Fusce tempus neque quis tempor varius. Nulla sit amet vulputate nisl, non auctor elit.
+            <br/>&nbsp;<br/>
+            Maecenas interdum, tellus nec mattis efficitur, est mauris efficitur leo, id aliquet est tellus et mi. Fusce ac leo nisi. In ultrices vitae turpis id tincidunt. Duis tincidunt turpis ipsum, sed suscipit erat euismod vel. Etiam dictum tincidunt ligula, at lacinia orci cursus eu. Donec nisl elit, mattis eget mi quis, luctus tristique ligula. Aenean mollis tortor eu justo fermentum, eget mattis lorem semper. Etiam diam nibh, elementum quis nisi nec, tincidunt fermentum turpis. Mauris suscipit tincidunt finibus. Mauris sed ligula lorem. Vivamus gravida erat sed lobortis aliquet. Cras a ligula ex. Nulla pellentesque volutpat lacinia. Aliquam eget mollis libero. Proin suscipit luctus sagittis. Nullam dignissim blandit lacinia.
+            <br/>&nbsp;<br/>
+            Aenean convallis dapibus neque. Mauris et ante ac metus fringilla eleifend ac sit amet ante. Morbi vel velit nisl. Quisque vitae consectetur ligula, sit amet imperdiet metus. Vivamus eget aliquet enim. Donec ut lacinia enim. Cras et nunc nec tellus tincidunt hendrerit id at est. Vivamus eget mi nulla. Phasellus scelerisque nunc eu ex pulvinar, nec facilisis sem lacinia. Nam nec convallis neque. Ut elementum pulvinar urna sed dignissim. Nunc vestibulum mollis velit in facilisis. Fusce commodo mattis fermentum.
+            <br/>&nbsp;<br/>
+            Pellentesque rhoncus scelerisque dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque condimentum ligula id lectus scelerisque laoreet. Nam maximus dolor ac ullamcorper finibus. Etiam ac diam ut sapien pulvinar consectetur. Nulla facilisi. Praesent mollis sapien nec metus luctus varius. Fusce finibus scelerisque convallis. Sed tincidunt ante nec nunc vulputate vehicula. Fusce interdum vehicula orci. Ut augue quam, interdum in turpis quis, ultrices euismod tellus. Curabitur eu urna vel ligula feugiat placerat. Maecenas finibus accumsan arcu a luctus. Suspendisse ullamcorper est viverra neque vestibulum blandit.
+            <br/>&nbsp;<br/>
+            Duis non sagittis elit. Aliquam vel nulla maximus, mollis dui vel, vehicula nulla. Nunc eu turpis imperdiet, blandit ex vitae, aliquam augue. Aenean mollis mauris nec magna convallis, non ultrices felis fermentum. Nullam quam neque, consectetur vitae felis eu, lacinia cursus dolor. Suspendisse pretium mollis libero, at elementum odio. Nullam aliquet blandit vehicula. Nulla euismod orci pretium turpis ultrices porttitor. Aliquam laoreet nisl pulvinar nulla finibus laoreet sed nec dui. Fusce ultrices mauris ut neque eleifend efficitur. Morbi vitae ipsum eget elit eleifend efficitur. Quisque ultrices, urna sed semper blandit, orci felis dictum nulla, at blandit dui mauris id arcu. Vivamus et elit non nunc condimentum congue vitae sed sapien. Integer tincidunt sapien ex, id tincidunt nunc imperdiet id. Quisque auctor eget libero ut laoreet. Maecenas tempor pellentesque enim nec porta.
+            <br/>&nbsp;<br/>
+            Nullam convallis, libero vel cursus aliquam, lacus sapien sodales tortor, eget finibus arcu ipsum sit amet sapien. Maecenas vehicula augue urna, at luctus urna egestas vel. Praesent feugiat condimentum dolor, vel gravida lacus bibendum eget. Vivamus aliquet dictum consequat. Nullam aliquet eros eu nisi luctus, id imperdiet metus ultrices. Cras laoreet purus eu risus aliquam, quis blandit velit sagittis. Vestibulum tempus ligula ac elit laoreet, eget porta libero sodales. Donec nec bibendum nisl.
+            <br/>&nbsp;<br/>
+            In ex magna, luctus quis pharetra eget, ultricies ac nibh. Integer id dignissim nibh, eu molestie nisl. Ut sit amet metus enim. Etiam ut ante ornare tortor lacinia facilisis id vel leo. Integer tellus lectus, dapibus eget ultricies vel, gravida a nisi. Maecenas massa est, dictum a scelerisque ut, commodo eu lectus. Donec purus erat, vulputate euismod metus mattis, egestas egestas felis.
+            <br/>&nbsp;<br/>
+            Praesent laoreet rutrum magna, ut sagittis magna sagittis sit amet. Duis ac erat eu orci porttitor varius. Donec sit amet nibh nec felis rutrum tristique et sed orci. Curabitur eleifend, mauris vel malesuada maximus, lectus ex sagittis ex, id porttitor nulla diam a sem. Nulla diam justo, imperdiet et nisi ac, viverra placerat urna. Praesent mattis consequat ligula sodales pulvinar. Ut nec turpis leo. Vestibulum nec ligula sed tortor iaculis scelerisque id sit amet libero. Phasellus porttitor leo a egestas pretium. Morbi dapibus, mi vel accumsan interdum, metus est varius diam, egestas congue sem arcu placerat ante. Ut in lacinia tellus. Ut lacinia sagittis felis a porttitor. Donec dictum auctor faucibus. Quisque dignissim ut sapien vel molestie. Mauris tempor, leo ut cursus auctor, quam ex mattis massa, sit amet tempor nisi odio volutpat est. Phasellus gravida vulputate dolor id ultricies.
+            <br/>&nbsp;<br/>
+            Etiam malesuada commodo lectus, ac pharetra urna placerat non. Nullam eget sagittis nunc. Vestibulum eget lacus vel lectus cursus vulputate. Sed malesuada suscipit urna sed laoreet. Mauris lobortis nec augue eu aliquam. Curabitur augue sem, dignissim a odio vitae, interdum consectetur nisl. In vitae dapibus risus, eu posuere tellus. Maecenas ut sagittis massa. Cras in nisl nunc. Sed rhoncus accumsan arcu, ac suscipit est finibus in. Integer in diam scelerisque, dapibus est id, porttitor diam. Phasellus euismod nisl sit amet justo condimentum finibus. Fusce tempus neque quis tempor varius. Nulla sit amet vulputate nisl, non auctor elit.
+            <br/>&nbsp;<br/>
+            Maecenas interdum, tellus nec mattis efficitur, est mauris efficitur leo, id aliquet est tellus et mi. Fusce ac leo nisi. In ultrices vitae turpis id tincidunt. Duis tincidunt turpis ipsum, sed suscipit erat euismod vel. Etiam dictum tincidunt ligula, at lacinia orci cursus eu. Donec nisl elit, mattis eget mi quis, luctus tristique ligula. Aenean mollis tortor eu justo fermentum, eget mattis lorem semper. Etiam diam nibh, elementum quis nisi nec, tincidunt fermentum turpis. Mauris suscipit tincidunt finibus. Mauris sed ligula lorem. Vivamus gravida erat sed lobortis aliquet. Cras a ligula ex. Nulla pellentesque volutpat lacinia. Aliquam eget mollis libero. Proin suscipit luctus sagittis. Nullam dignissim blandit lacinia.
+            <br/>&nbsp;<br/>
+            Aenean convallis dapibus neque. Mauris et ante ac metus fringilla eleifend ac sit amet ante. Morbi vel velit nisl. Quisque vitae consectetur ligula, sit amet imperdiet metus. Vivamus eget aliquet enim. Donec ut lacinia enim. Cras et nunc nec tellus tincidunt hendrerit id at est. Vivamus eget mi nulla. Phasellus scelerisque nunc eu ex pulvinar, nec facilisis sem lacinia. Nam nec convallis neque. Ut elementum pulvinar urna sed dignissim. Nunc vestibulum mollis velit in facilisis. Fusce commodo mattis fermentum.
+            <br/>&nbsp;<br/>
+            Pellentesque rhoncus scelerisque dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque condimentum ligula id lectus scelerisque laoreet. Nam maximus dolor ac ullamcorper finibus. Etiam ac diam ut sapien pulvinar consectetur. Nulla facilisi. Praesent mollis sapien nec metus luctus varius. Fusce finibus scelerisque convallis. Sed tincidunt ante nec nunc vulputate vehicula. Fusce interdum vehicula orci. Ut augue quam, interdum in turpis quis, ultrices euismod tellus. Curabitur eu urna vel ligula feugiat placerat. Maecenas finibus accumsan arcu a luctus. Suspendisse ullamcorper est viverra neque vestibulum blandit.
+            <br/>&nbsp;<br/>
+            Duis non sagittis elit. Aliquam vel nulla maximus, mollis dui vel, vehicula nulla. Nunc eu turpis imperdiet, blandit ex vitae, aliquam augue. Aenean mollis mauris nec magna convallis, non ultrices felis fermentum. Nullam quam neque, consectetur vitae felis eu, lacinia cursus dolor. Suspendisse pretium mollis libero, at elementum odio. Nullam aliquet blandit vehicula. Nulla euismod orci pretium turpis ultrices porttitor. Aliquam laoreet nisl pulvinar nulla finibus laoreet sed nec dui. Fusce ultrices mauris ut neque eleifend efficitur. Morbi vitae ipsum eget elit eleifend efficitur. Quisque ultrices, urna sed semper blandit, orci felis dictum nulla, at blandit dui mauris id arcu. Vivamus et elit non nunc condimentum congue vitae sed sapien. Integer tincidunt sapien ex, id tincidunt nunc imperdiet id. Quisque auctor eget libero ut laoreet. Maecenas tempor pellentesque enim nec porta.
+            <br/>&nbsp;<br/>
+            Nullam convallis, libero vel cursus aliquam, lacus sapien sodales tortor, eget finibus arcu ipsum sit amet sapien. Maecenas vehicula augue urna, at luctus urna egestas vel. Praesent feugiat condimentum dolor, vel gravida lacus bibendum eget. Vivamus aliquet dictum consequat. Nullam aliquet eros eu nisi luctus, id imperdiet metus ultrices. Cras laoreet purus eu risus aliquam, quis blandit velit sagittis. Vestibulum tempus ligula ac elit laoreet, eget porta libero sodales. Donec nec bibendum nisl.
+        </p>
+    </div>
+</section>
+
+</body>
+</html>

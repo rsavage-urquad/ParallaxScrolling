@@ -48,3 +48,11 @@ th {
     padding-right: 3px;
     color: black;
 }
+
+/* Miscellaneous */
+
+.preference {
+    font-size: small;
+    color: blue;
+    font-style: italic;
+}

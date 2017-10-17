@@ -3,29 +3,22 @@ var parallaxScroll;
 
 $(document).ready(function(){
     index = new Index();
-
-    // parallaxScroll = new ParallaxScroll("parallaxArea", "images/MountainLake-1920x780.png", 600 , 0.25, 0, -150, false);
-    //parallaxScroll = new ParallaxScroll("parallaxArea", "images/MultiPlanetsGold-1920x836.png", 450 , 0.25, 0, -350, false);
-
-
-    // window.onscroll = function(){
-    //     [].slice.call(parallax).forEach(function(el,i){
-    //
-    //         var windowYOffset = window.pageYOffset;
-    //         var elBackgroundPos = "0 " + ((windowYOffset * speed) - 150) + "px";
-    //
-    //         el.style.backgroundPosition = elBackgroundPos;
-    //
-    //     });
-    // };
-
 });
 
+/* -----------------------------------------------------------------*/
 
+/**
+ * Index Object - Object for Page
+ * @constructor
+ */
 var Index = function() {
     this.selectClicked();
 };
 
+/**
+ * selectClicked() - Process the "Select" click event by retrieving the parameters from the
+ * Input and Select elements and creating a ParallaxScroll object
+ */
 Index.prototype.selectClicked = function() {
     var image = $("#backgroundImage").val();
     var backgroundHeight = $("#backgroundHeight").val();
@@ -52,13 +45,23 @@ Index.prototype.selectClicked = function() {
     }
 
     coverValue = (cover === "True");
+
     parallaxScroll = new ParallaxScroll("parallaxArea", imageUrl, backgroundHeight , Number(speed), Number(xVal), Number(yVal), coverValue);
 };
 
+/* -----------------------------------------------------------------*/
 
-
-
-
+/**
+ * ParallaxScroll Object - Handles the setup and scrolling of the background.
+ * @param {String} sectionId - Section to contain the Background
+ * @param {string} backgroundImage - Image to use as the Background.
+ * @param {number} height - Height of the Section (in pixels)
+ * @param {number} speed - Scroll speed (ratio) of background to page.
+ * @param {string|number} xVal - Background X Position (If unsure, try 0)
+ * @param {number} yVal - Background Y Position in pixels, usually negative (You may have to play with this to avoid running out of image to display),
+ * @param {boolean} cover - Should
+ * @constructor
+ */
 var ParallaxScroll = function (sectionId, backgroundImage, height, speed, xVal, yVal, cover) {
     this.sectionId = sectionId;
     this.backgroundImage = backgroundImage;
@@ -73,14 +76,20 @@ var ParallaxScroll = function (sectionId, backgroundImage, height, speed, xVal, 
     this.initialize();
 };
 
+/**
+ * initialize() - Initialize the Background element (
+ */
 ParallaxScroll.prototype.initialize = function () {
     var realThis = this;
     var backgroundPos = this.xVal + " " + this.yVal + "px";
 
+    // Set CSS values
     this.sectionObj.css("background-image", "url(\"" + this.backgroundImage + "\")");
     this.sectionObj.css("height", this.height + "px");
     this.sectionObj.css("background-repeat", "no-repeat");
     this.sectionObj.css("background-attachment", "fixed");
+    this.sectionObj.css("background-position", backgroundPos);
+    this.sectionObj.css("line-height", this.height + "px");
 
     if (this.cover) {
         this.sectionObj.css("background-size", "cover");
@@ -89,12 +98,7 @@ ParallaxScroll.prototype.initialize = function () {
         this.sectionObj.css("background-size", "");
     }
 
-
-
-    this.sectionObj.css("background-position", backgroundPos);
-
-    this.sectionObj.css("line-height", this.height + "px");
-
+    // Setup Scroll event ptocessing.
     window.onscroll = function(){
         var windowYOffset = window.pageYOffset;
         var backgroundPos = realThis.xVal + " " + ((windowYOffset * realThis.speed) + realThis.yVal) + "px";
